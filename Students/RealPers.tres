@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Student" load_steps=3 format=3 uid="uid://bocq5j5i7fc7t"]
+
+[ext_resource type="Texture2D" uid="uid://d46x60iuaiwv" path="res://Images/Screenshot 2025-11-16 at 21.08.51.png" id="1_0eir0"]
+[ext_resource type="Script" path="res://ObjectsScripts/Student.gd" id="1_8upfd"]
+
+[resource]
+script = ExtResource("1_8upfd")
+studentName = "Caroline"
+healthConditions = Array[int]([0, 1, 2, 3, 4, 5])
+height = 150
+age = 0
+profilePicture = ExtResource("1_0eir0")
+profPicSaveDir = ""

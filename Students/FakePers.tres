@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Student" load_steps=3 format=3 uid="uid://wb1ons30slai"]
+
+[ext_resource type="Texture2D" uid="uid://c8vk8kw28xc8j" path="res://Images/the greatest show on earth.png" id="1_1vvhf"]
+[ext_resource type="Script" path="res://ObjectsScripts/Student.gd" id="1_pfb4f"]
+
+[resource]
+script = ExtResource("1_pfb4f")
+studentName = "Sabrina"
+healthConditions = Array[int]([0, 2, 4])
+birthday = {
+"day": 1,
+"month": 6
+}
+height = 160
+age = 50
+profilePicture = ExtResource("1_1vvhf")
+profPicSaveDir = ""
