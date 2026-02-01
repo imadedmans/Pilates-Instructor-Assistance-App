@@ -1,0 +1,320 @@
+[gd_scene load_steps=2 format=3 uid="uid://3ex5qkybc6qp"]
+
+[ext_resource type="Script" path="res://CreationScreens/Scripts/SessionCreation.gd" id="1_orx6s"]
+
+[node name="SessionCreationScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_right = 59.0
+offset_bottom = 42.0
+script = ExtResource("1_orx6s")
+
+[node name="TitleText" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 30.0
+offset_right = 652.0
+offset_bottom = 110.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Create New Session"
+
+[node name="GC" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 122.0
+offset_right = 820.0
+offset_bottom = 206.0
+columns = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GC"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Date:"
+
+[node name="Day" type="SpinBox" parent="GC"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+min_value = 1.0
+max_value = 31.0
+value = 1.0
+alignment = 1
+
+[node name="Month" type="OptionButton" parent="GC"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+selected = 0
+item_count = 12
+popup/item_0/text = "January"
+popup/item_1/text = "Febuary"
+popup/item_1/id = 1
+popup/item_2/text = "March"
+popup/item_2/id = 2
+popup/item_3/text = "April"
+popup/item_3/id = 3
+popup/item_4/text = "May"
+popup/item_4/id = 4
+popup/item_5/text = "June"
+popup/item_5/id = 5
+popup/item_6/text = "July"
+popup/item_6/id = 6
+popup/item_7/text = "August"
+popup/item_7/id = 7
+popup/item_8/text = "September"
+popup/item_8/id = 8
+popup/item_9/text = "October"
+popup/item_9/id = 9
+popup/item_10/text = "November"
+popup/item_10/id = 10
+popup/item_11/text = "December"
+popup/item_11/id = 11
+
+[node name="Year" type="SpinBox" parent="GC"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+min_value = 2025.0
+max_value = 2125.0
+value = 2026.0
+alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="GC"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Time:"
+
+[node name="Hour" type="SpinBox" parent="GC"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 23.0
+value = 6.0
+alignment = 1
+
+[node name="Minute" type="SpinBox" parent="GC"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 60.0
+alignment = 1
+
+[node name="Seconds" type="SpinBox" parent="GC"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 60.0
+alignment = 1
+
+[node name="GC2" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 211.0
+offset_right = 809.0
+offset_bottom = 298.0
+columns = 2
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="GC2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Student Selected:"
+
+[node name="Student" type="OptionButton" parent="GC2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="GC2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Reminder at:"
+
+[node name="ReminderTime" type="OptionButton" parent="GC2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+selected = 3
+item_count = 4
+popup/item_0/text = "15 Minutes"
+popup/item_1/text = "30 Minutes"
+popup/item_1/id = 1
+popup/item_2/text = "45 Minutes"
+popup/item_2/id = 2
+popup/item_3/text = "1 hour"
+popup/item_3/id = 3
+
+[node name="ProceedButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 1465.0
+offset_right = 813.0
+offset_bottom = 1589.0
+theme_override_font_sizes/font_size = 40
+text = "Proceed"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 1464.0
+offset_right = 284.0
+offset_bottom = 1588.0
+theme_override_font_sizes/font_size = 40
+text = "<Back"
+
+[node name="RoutineSelected" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 782.0
+offset_right = 759.0
+offset_bottom = 884.0
+theme_override_font_sizes/font_size = 30
+text = "Selected: (None)"
+alignment = 1
+
+[node name="GC3" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 898.0
+offset_right = 813.0
+offset_bottom = 1158.0
+columns = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GC3"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 28
+text = "Num of Exercises:"
+
+[node name="NumOfExercises" type="LineEdit" parent="GC3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+editable = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="GC3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Approximate Time:"
+
+[node name="ApproxTime" type="LineEdit" parent="GC3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+editable = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="GC3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Raw Difficulty:"
+
+[node name="RawDifficulty" type="LineEdit" parent="GC3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = ".../100"
+editable = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="GC3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Is Suitable?"
+
+[node name="Suitable" type="LineEdit" parent="GC3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+editable = false
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 325.0
+offset_right = 809.0
+offset_bottom = 748.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Routine
+
+"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 1238.0
+offset_right = 809.0
+offset_bottom = 1443.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Panel2/ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+disabled = true
+text = "Scilisosis
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.5
+offset_top = 1159.0
+offset_right = 785.5
+offset_bottom = 1210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 28
+text = "Parts Involved Difficult to Student:"
+
+[connection signal="item_selected" from="GC/Month" to="." method="_on_month_item_selected"]
+[connection signal="value_changed" from="GC/Year" to="." method="_on_year_value_changed"]
+[connection signal="item_selected" from="GC2/Student" to="." method="_on_student_item_selected"]
+[connection signal="button_down" from="ProceedButton" to="." method="_on_proceed_button_down"]
+[connection signal="button_down" from="BackButton" to="." method="_on_back_button_down"]
