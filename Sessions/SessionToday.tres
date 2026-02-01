@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Session" load_steps=4 format=3 uid="uid://bqehdnrsmf5tw"]
+
+[ext_resource type="Resource" uid="uid://dn1towtrvpw7r" path="res://Routines/TestRoutine.tres" id="1_0xb68"]
+[ext_resource type="Script" path="res://ObjectsScripts/Session.gd" id="1_2tqw8"]
+[ext_resource type="Resource" uid="uid://wb1ons30slai" path="res://Students/FakePers.tres" id="3_ek8jg"]
+
+[resource]
+script = ExtResource("1_2tqw8")
+studentAssigned = ExtResource("3_ek8jg")
+lengthInMin = 60.0
+reminderInMin = 50.0
+routineUsed = ExtResource("1_0xb68")
+TimeAndDate = {
+"day": 30,
+"hour": 19,
+"minute": 20,
+"month": 11,
+"second": 20,
+"year": 2025
+}
+hasReminded = false
+hasStarted = false
+hasEnded = false
