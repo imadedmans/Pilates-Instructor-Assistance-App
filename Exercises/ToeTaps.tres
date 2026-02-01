@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Exercise" load_steps=3 format=3 uid="uid://cvb2gt2wn1wfk"]
+
+[ext_resource type="Texture2D" uid="uid://0w6d2w1bdr6v" path="res://Images/Screenshot 2025-11-16 at 21.07.27.png" id="1_g0kr6"]
+[ext_resource type="Script" path="res://ObjectsScripts/Exercise.gd" id="1_kslgx"]
+
+[resource]
+script = ExtResource("1_kslgx")
+name = "Toe Taps"
+description = "Stuff goes here"
+previewPic = ExtResource("1_g0kr6")
+equipmentInvolved = 0
+muscleFocuses = Array[int]([0, 6])
+ageMin = 18
+ageMax = 70
+timeInSecs = 60
+difficulty = 0
+previewPicSaveDir = ""

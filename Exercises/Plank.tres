@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Exercise" load_steps=3 format=3 uid="uid://bc26aeoyjc1u8"]
+
+[ext_resource type="Script" path="res://ObjectsScripts/Exercise.gd" id="1_8dm2x"]
+[ext_resource type="Texture2D" uid="uid://8e8f4sx5rni3" path="res://Images/Screenshot 2025-11-16 at 21.08.04.png" id="1_hmtci"]
+
+[resource]
+script = ExtResource("1_8dm2x")
+name = "Planko"
+description = "Stuff goes here"
+previewPic = ExtResource("1_hmtci")
+equipmentInvolved = 0
+muscleFocuses = Array[int]([5, 4, 6])
+ageMin = 18
+ageMax = 70
+timeInSecs = 60
+difficulty = 1
+previewPicSaveDir = ""
