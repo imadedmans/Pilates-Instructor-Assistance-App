@@ -1,0 +1,331 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq0dyvbplynts"]
+
+[ext_resource type="Script" path="res://MiscScenes/Scripts/LoginScreen.gd" id="1_nfyfd"]
+[ext_resource type="PackedScene" uid="uid://r8qk3sgxj8yv" path="res://MiscScenes/MainMenu.tscn" id="2_rhwgw"]
+
+[node name="LogInScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nfyfd")
+nextScene = ExtResource("2_rhwgw")
+
+[node name="Login" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleText" type="RichTextLabel" parent="Login"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 33.0
+offset_right = 799.0
+offset_bottom = 118.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center] Log in into your account"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Login"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 187.0
+offset_right = 241.0
+offset_bottom = 247.0
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 30
+text = "Username:"
+
+[node name="ErrorMessage" type="RichTextLabel" parent="Login"]
+visible = false
+layout_mode = 0
+offset_left = 22.0
+offset_top = 246.0
+offset_right = 802.0
+offset_bottom = 292.0
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.899154, 0.407233, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=red] Username is incorrect"
+
+[node name="ErrorMessage2" type="RichTextLabel" parent="Login"]
+visible = false
+layout_mode = 0
+offset_left = 22.0
+offset_top = 379.0
+offset_right = 802.0
+offset_bottom = 425.0
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.899154, 0.407233, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=red] Password is incorrect"
+
+[node name="ErrorMessage3" type="RichTextLabel" parent="Login"]
+visible = false
+layout_mode = 0
+offset_left = 22.0
+offset_top = 246.0
+offset_right = 802.0
+offset_bottom = 292.0
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.899154, 0.407233, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=red] Field cannot be empty"
+
+[node name="ErrorMessage4" type="RichTextLabel" parent="Login"]
+visible = false
+layout_mode = 0
+offset_left = 22.0
+offset_top = 379.0
+offset_right = 802.0
+offset_bottom = 425.0
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.899154, 0.407233, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=red] Field cannot be empty"
+
+[node name="UsernameInput" type="LineEdit" parent="Login"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 185.0
+offset_right = 804.0
+offset_bottom = 235.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Login"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 311.0
+offset_right = 241.0
+offset_bottom = 371.0
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 30
+text = "Password:"
+
+[node name="PasswordInput" type="LineEdit" parent="Login"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 309.0
+offset_right = 804.0
+offset_bottom = 359.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="LogInButton" type="Button" parent="Login"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 502.0
+offset_right = 598.0
+offset_bottom = 672.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Log In"
+
+[node name="SignUpButton" type="Button" parent="Login"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 238.0
+offset_top = 699.0
+offset_right = 555.0
+offset_bottom = 790.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "...or Sign Up"
+
+[node name="SignUp" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleText" type="RichTextLabel" parent="SignUp"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 33.0
+offset_right = 799.0
+offset_bottom = 118.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center] Sign Up"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SignUp"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 187.0
+offset_right = 241.0
+offset_bottom = 247.0
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 30
+text = "Username:"
+
+[node name="UsernameInput" type="LineEdit" parent="SignUp"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 186.0
+offset_right = 804.0
+offset_bottom = 236.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="SignUp"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 303.0
+offset_right = 241.0
+offset_bottom = 363.0
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 30
+text = "Password:"
+
+[node name="PasswordInput" type="LineEdit" parent="SignUp"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 301.0
+offset_right = 804.0
+offset_bottom = 351.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="SignUp"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 420.0
+offset_right = 241.0
+offset_bottom = 516.0
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 30
+text = "Renter password:"
+
+[node name="PasswordInput2" type="LineEdit" parent="SignUp"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 418.0
+offset_right = 804.0
+offset_bottom = 468.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="CreateUserButton" type="Button" parent="SignUp"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 193.0
+offset_top = 687.0
+offset_right = 598.0
+offset_bottom = 857.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Sign Up"
+
+[node name="BackButton" type="Button" parent="SignUp"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 238.0
+offset_top = 885.0
+offset_right = 555.0
+offset_bottom = 976.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Back"
+
+[node name="ErrorMessage" type="RichTextLabel" parent="SignUp"]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 529.0
+offset_right = 803.0
+offset_bottom = 575.0
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.899154, 0.407233, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=red] Reentered password does not match with above"
+
+[node name="ErrorMessage2" type="RichTextLabel" parent="SignUp"]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 238.0
+offset_right = 803.0
+offset_bottom = 284.0
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.899154, 0.407233, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=red] Field cannot be empty"
+
+[node name="ErrorMessage3" type="RichTextLabel" parent="SignUp"]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 353.0
+offset_right = 803.0
+offset_bottom = 399.0
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.899154, 0.407233, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=red] Field cannot be empty"
+
+[node name="ErrorMessage4" type="RichTextLabel" parent="SignUp"]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 529.0
+offset_right = 803.0
+offset_bottom = 575.0
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.899154, 0.407233, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=red] Field cannot be empty"
+
+[node name="ErrorMessage5" type="RichTextLabel" parent="SignUp"]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 238.0
+offset_right = 803.0
+offset_bottom = 284.0
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.899154, 0.407233, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=red] Username already exists!"
+
+[connection signal="button_down" from="Login/LogInButton" to="." method="_on_log_in_button_down"]
+[connection signal="button_down" from="Login/SignUpButton" to="." method="_on_sign_up_button_down"]
+[connection signal="button_down" from="SignUp/CreateUserButton" to="." method="_on_create_user_button_down"]
+[connection signal="button_down" from="SignUp/BackButton" to="." method="_on_back_button_down"]

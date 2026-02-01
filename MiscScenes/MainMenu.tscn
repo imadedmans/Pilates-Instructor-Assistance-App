@@ -1,0 +1,166 @@
+[gd_scene load_steps=2 format=3 uid="uid://r8qk3sgxj8yv"]
+
+[ext_resource type="Script" path="res://MiscScenes/Scripts/MainMenu.gd" id="1_16q2c"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_16q2c")
+
+[node name="HSC" type="HSplitContainer" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 862.0
+offset_right = 815.0
+offset_bottom = 1559.0
+split_offset = 550
+
+[node name="VC1" type="VBoxContainer" parent="HSC"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HSC/VC1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "Check All Sessions"
+
+[node name="Button2" type="Button" parent="HSC/VC1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "Check Student Profiles"
+
+[node name="Button3" type="Button" parent="HSC/VC1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "Check All Exercises"
+
+[node name="Button4" type="Button" parent="HSC/VC1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "Check All Routines"
+
+[node name="VC2" type="VBoxContainer" parent="HSC"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HSC/VC2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Button2" type="Button" parent="HSC/VC2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Button3" type="Button" parent="HSC/VC2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Button4" type="Button" parent="HSC/VC2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="TitleText" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 26.0
+offset_right = 567.0
+offset_bottom = 106.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Main Menu
+"
+
+[node name="Calendar" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 182.0
+offset_right = 810.0
+offset_bottom = 838.0
+
+[node name="HBC" type="HBoxContainer" parent="Calendar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SC" type="ScrollContainer" parent="Calendar/HBC"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBC" type="VBoxContainer" parent="Calendar/HBC/SC"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Date" type="Button" parent="Calendar/HBC/SC/VBC"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "29 September 2025"
+
+[node name="SessionThing" type="Button" parent="Calendar/HBC/SC/VBC"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "Session With: Suhui
+29 September 2025 (20:00)"
+
+[node name="SC2" type="ScrollContainer" parent="Calendar/HBC"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBC2" type="VBoxContainer" parent="Calendar/HBC/SC2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Date2" type="Button" parent="Calendar/HBC/SC2/VBC2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "dshadsada"
+
+[node name="SessionThing" type="Button" parent="Calendar/HBC/SC2/VBC2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "Session With: Suhui
+29 September 2025 (20:00)"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = 714.0
+offset_right = 282.0
+offset_bottom = 830.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "Log Out"
+
+[connection signal="button_down" from="Button" to="." method="_on_log_out_button_down"]

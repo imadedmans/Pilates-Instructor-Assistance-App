@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://duc42qagilpnf"]
+
+[ext_resource type="Script" path="res://MiscScenes/Scripts/NotificationScreen.gd" id="1_wfl87"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8clf"]
+bg_color = Color(0.286684, 0.286684, 0.286683, 1)
+
+[node name="NotificationBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wfl87")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -132.0
+offset_right = 214.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_k8clf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -98.5
+offset_right = 202.0
+offset_bottom = -1.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Session with Suhui starts in 15 minutes 
+"
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = 9.5
+offset_right = 125.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Okay"
+
+[connection signal="button_down" from="Panel/Button" to="." method="_on_ok_button_down"]
