@@ -1,0 +1,173 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgif3pib3ulgh"]
+
+[ext_resource type="Script" path="res://ListScenes/Scripts/SessionList.gd" id="1_d1p2p"]
+[ext_resource type="Texture2D" uid="uid://cl5kr2s74tnr1" path="res://Images/542724.png" id="2_rasfw"]
+
+[node name="SessionList" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d1p2p")
+
+[node name="TitleText" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 33.0
+offset_right = 649.0
+offset_bottom = 113.0
+theme_override_font_sizes/normal_font_size = 50
+text = "List Of Sessions"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 239.0
+offset_right = 601.0
+offset_bottom = 280.0
+theme_override_font_sizes/normal_font_size = 28
+text = "All Exercises:"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 285.0
+offset_right = 802.0
+offset_bottom = 1393.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBC" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBC" type="HBoxContainer" parent="Panel/ScrollContainer/VBC"]
+visible = false
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBC/HBC"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "
+Session With: 
+
+(...)
+
+"
+
+[node name="TextureButton" type="TextureButton" parent="Panel/ScrollContainer/VBC/HBC"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_rasfw")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="WarningMessage" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -93.0
+offset_right = 235.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBC" type="HBoxContainer" parent="WarningMessage"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -189.0
+offset_top = -95.0
+offset_right = 190.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="WarningMessage/HBC"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Delete"
+
+[node name="Button2" type="Button" parent="WarningMessage/HBC"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Never mind"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WarningMessage"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -40.0
+offset_right = 197.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center] Delete this session? [center]"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 1314.0
+offset_right = 804.0
+offset_bottom = 1410.0
+
+[node name="PrevButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "<Prev"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center] Page 1/2 [/center]"
+
+[node name="NextButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "Next>"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 1425.0
+offset_right = 805.0
+offset_bottom = 1517.0
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "<Back"
+
+[connection signal="button_down" from="WarningMessage/HBC/Button2" to="." method="never_mind"]
+[connection signal="button_down" from="BackButton" to="." method="_on_back_button_down"]

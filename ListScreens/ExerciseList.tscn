@@ -1,0 +1,124 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwgg0q2jgkxn4"]
+
+[ext_resource type="Script" path="res://ListScenes/Scripts/ExerciseList.gd" id="1_0vw4g"]
+[ext_resource type="Texture2D" uid="uid://8e8f4sx5rni3" path="res://Images/Screenshot 2025-11-16 at 21.08.04.png" id="2_83hkx"]
+
+[node name="ExerciseList" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0vw4g")
+
+[node name="TitleText" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 33.0
+offset_right = 649.0
+offset_bottom = 113.0
+theme_override_font_sizes/normal_font_size = 50
+text = "List of Exercises"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 239.0
+offset_right = 601.0
+offset_bottom = 280.0
+theme_override_font_sizes/normal_font_size = 28
+text = "All Exercises:"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 285.0
+offset_right = 802.0
+offset_bottom = 1283.0
+
+[node name="ScrollCont" type="ScrollContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 771.0
+offset_bottom = 997.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollCont"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ScrollCont/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Panel/ScrollCont/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "
+
+Muscles Involved: eeee
+eeee
+
+Difficulty: Foundational
+
+
+"
+
+[node name="Button2" type="Button" parent="Panel/ScrollCont/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "
+
+Muscles Involved: eeee
+eeee
+
+Difficulty: Foundational
+
+
+"
+
+[node name="TextureRect" type="TextureRect" parent="Panel/ScrollCont/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_83hkx")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 1314.0
+offset_right = 804.0
+offset_bottom = 1410.0
+
+[node name="PrevButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "<Prev"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center] Page 1/2 [/center]"
+
+[node name="NextButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "Next>"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 1425.0
+offset_right = 805.0
+offset_bottom = 1517.0
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "<Back"
+
+[connection signal="button_down" from="BackButton" to="." method="_on_back_button"]
