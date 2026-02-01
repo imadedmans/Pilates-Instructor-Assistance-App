@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Exercise" load_steps=2 format=3 uid="uid://41whdk22h0vg"]
+
+[ext_resource type="Script" path="res://ObjectsScripts/Exercise.gd" id="1_5q21v"]
+
+[resource]
+script = ExtResource("1_5q21v")
+name = "Exercise"
+description = "Stuff goes here"
+equipmentInvolved = 1
+muscleFocuses = Array[int]([14, 0])
+ageMin = 18
+ageMax = 70
+timeInSecs = 60
+difficulty = 0

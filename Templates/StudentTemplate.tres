@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Student" load_steps=2 format=3 uid="uid://bo75ecm1isppo"]
+
+[ext_resource type="Script" path="res://ObjectsScripts/Student.gd" id="1_pniuk"]
+
+[resource]
+script = ExtResource("1_pniuk")
+studentName = ""
+healthConditions = Array[int]([])
+height = 160
+age = 0

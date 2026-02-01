@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Routine" load_steps=3 format=3 uid="uid://di83532r71hx3"]
+
+[ext_resource type="Script" path="res://ObjectsScripts/Exercise.gd" id="1_5st6t"]
+[ext_resource type="Script" path="res://ObjectsScripts/Routine.gd" id="2_hg6dt"]
+
+[resource]
+script = ExtResource("2_hg6dt")
+exercises = Array[ExtResource("1_5st6t")]([null, null])

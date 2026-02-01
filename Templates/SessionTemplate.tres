@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Session" load_steps=2 format=3 uid="uid://crjlj84dvocq4"]
+
+[ext_resource type="Script" path="res://ObjectsScripts/Session.gd" id="1_fyh17"]
+
+[resource]
+script = ExtResource("1_fyh17")
