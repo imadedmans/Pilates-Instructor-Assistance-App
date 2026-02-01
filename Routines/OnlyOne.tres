@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Routine" load_steps=4 format=3 uid="uid://clyumg2mbm5h3"]
+
+[ext_resource type="Script" path="res://ObjectsScripts/Exercise.gd" id="1_qxf8d"]
+[ext_resource type="Resource" uid="uid://cvb2gt2wn1wfk" path="res://Exercises/ToeTaps.tres" id="2_0vkek"]
+[ext_resource type="Script" path="res://ObjectsScripts/Routine.gd" id="2_apriu"]
+
+[resource]
+script = ExtResource("2_apriu")
+routineName = "Only One"
+exercises = Array[ExtResource("1_qxf8d")]([ExtResource("2_0vkek")])

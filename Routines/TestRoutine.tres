@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Routine" load_steps=6 format=3 uid="uid://dn1towtrvpw7r"]
+
+[ext_resource type="Script" path="res://ObjectsScripts/Exercise.gd" id="1_duv8d"]
+[ext_resource type="Script" path="res://ObjectsScripts/Routine.gd" id="2_2fnmo"]
+[ext_resource type="Resource" uid="uid://cvb2gt2wn1wfk" path="res://Exercises/ToeTaps.tres" id="2_gqdhu"]
+[ext_resource type="Resource" uid="uid://bc26aeoyjc1u8" path="res://Exercises/Plank.tres" id="3_8cieo"]
+[ext_resource type="Resource" uid="uid://dng5k4tont0js" path="res://Exercises/ChestExpansion.tres" id="4_fdjga"]
+
+[resource]
+script = ExtResource("2_2fnmo")
+routineName = "Three of Em"
+exercises = Array[ExtResource("1_duv8d")]([ExtResource("2_gqdhu"), ExtResource("3_8cieo"), ExtResource("4_fdjga")])
