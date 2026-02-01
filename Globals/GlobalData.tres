@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="GlobalData" load_steps=11 format=3 uid="uid://tehu4f12r8h2"]
+
+[ext_resource type="Script" path="res://Globals/GlobalData.gd" id="1_cvu5k"]
+[ext_resource type="Script" path="res://ObjectsScripts/Exercise.gd" id="1_eekgg"]
+[ext_resource type="Script" path="res://ObjectsScripts/Student.gd" id="2_5phhv"]
+[ext_resource type="Script" path="res://ObjectsScripts/Routine.gd" id="2_iotog"]
+[ext_resource type="Script" path="res://ObjectsScripts/Session.gd" id="4_2gcms"]
+
+[sub_resource type="Resource" id="Resource_rbd71"]
+script = ExtResource("1_eekgg")
+name = "Exercise"
+description = "Stuff goes here"
+equipmentInvolved = 0
+muscleFocuses = Array[int]([])
+ageMin = 18
+ageMax = 70
+timeInSecs = 60
+difficulty = 0
+previewPicSaveDir = ""
+
+[sub_resource type="Resource" id="Resource_t0ako"]
+script = ExtResource("2_iotog")
+routineName = "Routine"
+exercises = Array[ExtResource("1_eekgg")]([])
+
+[sub_resource type="Resource" id="Resource_pvmo5"]
+script = ExtResource("4_2gcms")
+lengthInMin = 0.0
+reminderInMin = 0.0
+TimeAndDate = {
+"day": 1,
+"hour": 1,
+"minute": 1,
+"month": 0,
+"second": 1,
+"year": 2026
+}
+hasReminded = false
+hasStarted = false
+hasEnded = false
+
+[sub_resource type="Resource" id="Resource_rfmgi"]
+script = ExtResource("2_5phhv")
+studentName = ""
+healthConditions = Array[int]([])
+birthday = {
+"day": 1,
+"month": 0
+}
+height = 160
+age = 18
+profPicSaveDir = ""
+
+[sub_resource type="Resource" id="Resource_8awxk"]
+script = ExtResource("2_5phhv")
+studentName = ""
+healthConditions = Array[int]([])
+birthday = {
+"day": 1,
+"month": 0
+}
+height = 160
+age = 18
+profPicSaveDir = ""
+
+[resource]
+script = ExtResource("1_cvu5k")
+users = [["SuhuiGoh987", "password1"], ["imadedmans", "waterBottle8@"], ["GINGBASTER", "THEROYALSCIENTIST"]]
+students = {
+"Er Yi": SubResource("Resource_rfmgi"),
+"Suhui": SubResource("Resource_8awxk")
+}
+exercises = {
+"Curl-Ups": SubResource("Resource_rbd71")
+}
+routines = {
+"Fake": SubResource("Resource_t0ako")
+}
+sessions = {
+"What": SubResource("Resource_pvmo5")
+}
+firstTime = true
